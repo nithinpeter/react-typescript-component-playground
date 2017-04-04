@@ -10,7 +10,7 @@ import {
 
 const ButtonStory = createStoriesOf('Button')
                         .add('simple button', <Button label={'click me'}/>)
-                        .add('simple button', <Button label={'dont click me'}/>)
+                        .add('simple button', <Button label={'dont click me'}/>);
 
 ReactDOM.render(
     renderStory(ButtonStory.getStoryItems()),
