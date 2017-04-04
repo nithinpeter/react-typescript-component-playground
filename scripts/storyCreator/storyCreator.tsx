@@ -6,7 +6,7 @@ const createStoriesOf = (identifier: string) => {
     storyItems[identifier] = [];
 
     return {
-        getStoryItems: function() {
+        _getStoryItems: function() {
             return storyItems;
         },
         add: function (description: string, component: React.Component<any, any> | JSX.Element) {
@@ -19,26 +19,6 @@ const createStoriesOf = (identifier: string) => {
     }
 }
 
-const renderStory = (storyItems: any = []) => {
-
-    const rendered = Object.keys(storyItems).map((key: string) => {
-        return <div>
-            <h3>{key}</h3>
-            {
-                storyItems[key].map((item: any) => <div>
-                    <em>{item.description}</em>
-                    {item.component}
-                </div>)
-            }
-        </div>
-    });
-
-    return <div>
-        {rendered}
-    </div>
-}
-
 export {
     createStoriesOf,
-    renderStory
 }
