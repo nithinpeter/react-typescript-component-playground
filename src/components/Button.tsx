@@ -2,9 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 interface ButtonProps {
-    children: 'string'
+    label: string
 }
 
-const App = (props: ButtonProps) =>  <button>Hellsdfo</button>
+const App = (props: ButtonProps) =>  <button>{props.label}</button>
 
 export default App;
